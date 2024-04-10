@@ -10,6 +10,7 @@ package Kernel::Modules::AgentITSMConfigItemCustomerCIsWidget;
 
 use strict;
 use warnings;
+use utf8;
 
 our @ObjectDependencies = (
     'Kernel::Output::HTML::Layout',
@@ -17,8 +18,6 @@ our @ObjectDependencies = (
     'Kernel::System::LinkObject',
     'Kernel::System::Web::Request',
 );
-
-use Kernel::System::VariableCheck qw(:all);
 
 sub new {
     my ( $Type, %Param ) = @_;
@@ -55,14 +54,38 @@ sub Run {
         );
     }
     elsif ( $Self->{Subaction} eq 'LinkDelete' ) {
-        $LinkObject->LinkDelete(
-            Object1 => 'Ticket',
-            Key1    => $Param{TicketID},
+        my $LinkList = $LinkObject->LinkList(
+            Object  => 'Ticket',
+            Key     => $Param{TicketID},
             Object2 => 'ITSMConfigItem',
-            Key2    => $Param{ConfigItemID},
-            Type    => 'RelevantTo',
+            State   => 'Valid',
             UserID  => $Self->{UserID},
         );
+
+        my $LinkType;
+
+        LINKTYPE:
+        for my $Type ( sort keys %{ $LinkList->{ITSMConfigItem} } ) {
+            for my $Direction ( sort keys %{ $LinkList->{ITSMConfigItem}->{$Type} } ) {
+                for my $ConfigItemID ( sort keys %{ $LinkList->{ITSMConfigItem}->{$Type}->{$Direction} } ) {
+                    if ( $ConfigItemID == $Param{ConfigItemID} ) {
+                        $LinkType = $Type;
+                        last LINKTYPE;
+                    }
+                }
+            }
+        }
+
+        if ( defined $LinkType ) {
+            $LinkObject->LinkDelete(
+                Object1 => 'Ticket',
+                Key1    => $Param{TicketID},
+                Object2 => 'ITSMConfigItem',
+                Key2    => $Param{ConfigItemID},
+                Type    => $LinkType,
+                UserID  => $Self->{UserID},
+            );
+        }
     }
     elsif ( $Self->{Subaction} eq 'CustomerUpdate' && $Param{CustomerUserID} ) {
 
