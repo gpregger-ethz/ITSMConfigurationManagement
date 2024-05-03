@@ -1612,6 +1612,24 @@
             </Array>
         </Value>
     </Setting>
+    <Setting Name="AgentITSMConfigItemCustomerCIsWidget###CustomerCIDeploymentStates" Required="0" Valid="1">
+        <Description Translatable="1">Filters the customer config items by depoyment states into the customer config item widget.</Description>
+        <Navigation>Core::Znuny::CustomerCIs</Navigation>
+        <Value>
+            <Array>
+                <Item>Production</Item>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="AgentITSMConfigItemCustomerCIsWidget###CustomerCompanyCIDeploymentStates" Required="0" Valid="1">
+        <Description Translatable="1">Filters the customer company config items by depoyment states into the customer config item widget.</Description>
+        <Navigation>Core::Znuny::CustomerCIs</Navigation>
+        <Value>
+            <Array>
+                <Item>Production</Item>
+            </Array>
+        </Value>
+    </Setting>
     <Setting Name="AgentITSMConfigItemCustomerCIsWidget###LinkType" Required="1" Valid="1">
         <Description Translatable="1">Defines which type of link (named from the ticket perspective) is used to link tickets and config items.</Description>
         <Navigation>Core::Znuny::CustomerCIs</Navigation>

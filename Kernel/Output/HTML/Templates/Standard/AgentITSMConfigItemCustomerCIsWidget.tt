@@ -7,7 +7,7 @@
 # --
 
 [% RenderBlockStart("Widget") %]
-<div class="WidgetSimple Expanded" id="AgentITSMConfigItemCustomerCIsWidget">
+<div class="WidgetSimple Hidden" id="AgentITSMConfigItemCustomerCIsWidget">
     <div class="Header">
         <h2>[% Translate("Customer related config items") | html %]</h2>
     </div>

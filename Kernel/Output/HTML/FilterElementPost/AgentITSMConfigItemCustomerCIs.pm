@@ -65,6 +65,7 @@ sub Run {
     $Param{TicketID} = $ParamObject->GetParam( Param => 'TicketID' ) || '';
 
     my %Data;
+    my %SearchParams;
 
     $LayoutObject->Block(
         Name => 'Widget',
@@ -77,9 +78,6 @@ sub Run {
     my @ConfigItems = $ITSMConfigItemCustomerCIsObject->GetPossibleCustomerCIs(
         TicketID => $Param{TicketID},
     );
-
-    # Hide ticket zoom widget when no data is available to show.
-    return if !@ConfigItems;
 
     for my $ConfigItem (@ConfigItems) {
         $LayoutObject->Block(

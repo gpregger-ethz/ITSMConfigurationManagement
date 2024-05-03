@@ -19,6 +19,8 @@ our @ObjectDependencies = (
     'Kernel::System::Web::Request',
 );
 
+use Kernel::System::VariableCheck qw(:all);
+
 sub new {
     my ( $Type, %Param ) = @_;
 
