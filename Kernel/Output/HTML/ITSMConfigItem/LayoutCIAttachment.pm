@@ -416,7 +416,7 @@ sub AttachmentKeyGet {
 
 =head2 FormIDGet()
 
-This function returns the form id for the attachment field.
+This function returns the form id for the CIAttachment field.
 
     my $FormID = $BackendObject->FormIDGet(
         AttachmentKey => 123,
@@ -424,7 +424,7 @@ This function returns the form id for the attachment field.
 
 Returns:
 
-    my $FormID = '111.12.3.123.1.23';
+    my $FormID = '1234.1234.1234.CIAttachment.AttachmentKey';
 
 =cut
 

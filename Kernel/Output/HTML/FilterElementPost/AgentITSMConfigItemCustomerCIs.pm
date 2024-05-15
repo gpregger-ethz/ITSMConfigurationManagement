@@ -77,20 +77,18 @@ sub Run {
         TicketID => $Param{TicketID},
     );
 
-    if (@ConfigItems) {
-        for my $ConfigItem (@ConfigItems) {
-            $LayoutObject->Block(
-                Name => 'ConfigItems',
-                Data => {
-                    %{$ConfigItem},
-                },
-            );
-        }
-        $Data{ConfigItems} = $LayoutObject->Output(
-            TemplateFile => 'AgentITSMConfigItemCustomerCIsWidget',
-            Data         => \%Data,
+    for my $ConfigItem (@ConfigItems) {
+        $LayoutObject->Block(
+            Name => 'ConfigItems',
+            Data => {
+                %{$ConfigItem},
+            },
         );
     }
+    $Data{ConfigItems} = $LayoutObject->Output(
+        TemplateFile => 'AgentITSMConfigItemCustomerCIsWidget',
+        Data         => \%Data,
+    );
 
     my $InitParameter = $LayoutObject->JSONEncode(
         NoQuotes => 1,

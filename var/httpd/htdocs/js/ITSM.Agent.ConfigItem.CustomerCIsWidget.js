@@ -99,6 +99,7 @@ ITSM.Agent.ConfigItem.CustomerCIsWidget = (function (TargetNS) {
                     'json'
                 );
             });
+            $('#AgentITSMConfigItemCustomerCIsWidget').show();
         }
         else {
             if (!GetCustomerInfoHandler) {
@@ -154,8 +155,10 @@ ITSM.Agent.ConfigItem.CustomerCIsWidget = (function (TargetNS) {
                 if (Param.ConfigItems) {
                     $('#AgentITSMConfigItemCustomerCIs').append(Param.ConfigItems);
                     TargetNS.SetEventHandler();
+                    $('#AgentITSMConfigItemCustomerCIsWidget').show();
                 }
                 else {
+                    $('#AgentITSMConfigItemCustomerCIsWidget').hide();
                     $('#AgentITSMConfigItemCustomerCIs').append(Core.Language.Translate('none'));
                 }
             },

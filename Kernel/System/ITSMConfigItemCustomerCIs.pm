@@ -10,6 +10,7 @@ package Kernel::System::ITSMConfigItemCustomerCIs;
 
 use strict;
 use warnings;
+use utf8;
 
 our @ObjectDependencies = (
     'Kernel::Config',
@@ -54,7 +55,10 @@ sub new {
 Searches for all customer user specific config items
 
     my @ConfigItemIDs = $ITSMConfigItemCustomerCIsObject->GetCustomerUserCIs(
-        CustomerUserID => $CustomerUserLogin,                       # the CustomerUserID is the UserLogin
+        CustomerUserID => $CustomerUserLogin,    # the CustomerUserID is the UserLogin
+        SearchParams   => (                      # optional search parameters for the ConfigItemSearchExtended function
+            DeplStateIDs => [1, 2, 3],
+        )
     );
 
 Returns:
@@ -93,6 +97,8 @@ sub GetCustomerUserCIs {
     );
     my %Classes = reverse %{$Classes};
 
+    my %SearchParams = %{ $Param{SearchParams} // {} };
+
     my @ConfigItemIDs;
     ENTRY:
     for my $Class ( sort keys %ConfigItemKey ) {
@@ -111,6 +117,7 @@ sub GetCustomerUserCIs {
         my $What = '[%]{' . "'Version'" . '}[%]{' . "'" . $Attribute . "'" . '}[%]{' . "'Content'" . '}';
 
         my $ConfigItemIDs = $ConfigItemObject->ConfigItemSearchExtended(
+            %SearchParams,
             ClassIDs => [ $ItemDataRef->{ItemID} ],
             What     => [
                 {
@@ -132,7 +139,10 @@ sub GetCustomerUserCIs {
 Searches for all customer specific config items
 
     my @ConfigItemIDs = $ITSMConfigItemCustomerCIsObject->GetCustomerCIs(
-        CustomerID => $CustomerID,
+        CustomerID     => $CustomerID,
+        SearchParams   => {             # optional search parameters for the ConfigItemSearchExtended function
+            DeplStateIDs => [25, 26],
+        },
     );
 
 Returns:
@@ -171,6 +181,8 @@ sub GetCustomerCIs {
     );
     my %Classes = reverse %{$Classes};
 
+    my %SearchParams = %{ $Param{SearchParams} // {} };
+
     my @ConfigItemIDs;
     ENTRY:
     for my $Class ( sort keys %ConfigItemKey ) {
@@ -189,6 +201,7 @@ sub GetCustomerCIs {
         my $What = '[%]{' . "'Version'" . '}[%]{' . "'" . $Attribute . "'" . '}[%]{' . "'Content'" . '}';
 
         my $ConfigItemIDs = $ConfigItemObject->ConfigItemSearchExtended(
+            %SearchParams,
             ClassIDs => [ $ItemDataRef->{ItemID} ],
             What     => [
                 {
@@ -212,7 +225,10 @@ Returns possible customer CIs.
 
     my @ConfigItems = $ITSMConfigItemCustomerCIsObject->GetPossibleCustomerCIs(
         CustomerUserID => 123,
-        TicketID       => 123,      # optional
+        TicketID       => 123,        # optional
+        SearchParams   => {           # optional
+            DeplStateIDs => [25, 26],
+        },
     );
 
 Returns:
@@ -230,12 +246,40 @@ Returns:
 sub GetPossibleCustomerCIs {
     my ( $Self, %Param ) = @_;
 
-    my $ConfigItemObject = $Kernel::OM->Get('Kernel::System::ITSMConfigItem');
-    my $ConfigObject     = $Kernel::OM->Get('Kernel::Config');
-    my $LinkObject       = $Kernel::OM->Get('Kernel::System::LinkObject');
-    my $TicketObject     = $Kernel::OM->Get('Kernel::System::Ticket');
+    my $ConfigItemObject     = $Kernel::OM->Get('Kernel::System::ITSMConfigItem');
+    my $ConfigObject         = $Kernel::OM->Get('Kernel::Config');
+    my $LinkObject           = $Kernel::OM->Get('Kernel::System::LinkObject');
+    my $TicketObject         = $Kernel::OM->Get('Kernel::System::Ticket');
+    my $GeneralCatalogObject = $Kernel::OM->Get('Kernel::System::GeneralCatalog');
 
-    my $Config = $ConfigObject->Get('ITSMConfigItem::Frontend::AgentITSMConfigItemCustomerCIs');
+    my $Config       = $ConfigObject->Get('ITSMConfigItem::Frontend::AgentITSMConfigItemCustomerCIs');
+    my $WidgetConfig = $ConfigObject->Get('AgentITSMConfigItemCustomerCIsWidget');
+
+    my %CustomerSearchParams;
+    my %CustomerCompanySearchParams;
+
+    CONFIGPARAMNAME:
+    for my $ConfigParamName (qw(CustomerCIDeploymentStates CustomerCompanyCIDeploymentStates)) {
+        next CONFIGPARAMNAME if !IsArrayRefWithData( $WidgetConfig->{$ConfigParamName} );
+
+        my @DeplStateIDs;
+
+        ITEMNAME:
+        for my $ItemName ( sort @{ $WidgetConfig->{$ConfigParamName} } ) {
+            my $ItemDataRef = $GeneralCatalogObject->ItemGet(
+                Class => 'ITSM::ConfigItem::DeploymentState',
+                Name  => $ItemName,
+            );
+            next ITEMNAME if !IsHashRefWithData($ItemDataRef);
+            push @DeplStateIDs, $ItemDataRef->{ItemID};
+        }
+        if ( $ConfigParamName eq 'CustomerCIDeploymentStates' ) {
+            $CustomerSearchParams{SearchParams}->{DeplStateIDs} = \@DeplStateIDs;
+        }
+        else {
+            $CustomerCompanySearchParams{SearchParams}->{DeplStateIDs} = \@DeplStateIDs;
+        }
+    }
 
     my %LinkKeyList;
 
@@ -265,6 +309,7 @@ sub GetPossibleCustomerCIs {
         @CustomerUserConfigItemIDs = $Self->GetCustomerUserCIs(
             CustomerUserID => $Param{CustomerUserID},
             Limit          => $Config->{SearchLimit},
+            %CustomerSearchParams,
         );
     }
     my @CustomerConfigItemIDs;
@@ -272,6 +317,7 @@ sub GetPossibleCustomerCIs {
         @CustomerConfigItemIDs = $Self->GetCustomerCIs(
             CustomerID => $Param{CustomerID},
             Limit      => $Config->{SearchLimit},
+            %CustomerCompanySearchParams,
         );
     }
 

@@ -11,6 +11,7 @@ package Kernel::System::ITSMConfigItem;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::System::EventHandler;
 use Kernel::System::ITSMConfigItem::Definition;
