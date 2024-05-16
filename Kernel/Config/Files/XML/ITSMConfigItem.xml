@@ -1854,4 +1854,22 @@
             </Item>
         </Value>
     </Setting>
+    <Setting Name="AutoloadPerlPackages###100-WebUploadCacheDB" Required="1" Valid="1">
+        <Description Translatable="1">Autoloading of upload cache.</Description>
+        <Navigation>Core::Autoload</Navigation>
+        <Value>
+            <Array>
+                <Item ValueType="String">Kernel::Autoload::WebUploadCacheDB</Item>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="AutoloadPerlPackages###100-WebUploadCacheFS" Required="1" Valid="1">
+        <Description Translatable="1">Autoloading of upload cache.</Description>
+        <Navigation>Core::Autoload</Navigation>
+        <Value>
+            <Array>
+                <Item ValueType="String">Kernel::Autoload::WebUploadCacheFS</Item>
+            </Array>
+        </Value>
+    </Setting>
 </otrs_config>
