@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>ITSMConfigurationManagement</Name>
-    <Version>6.5.2</Version>
+    <Version>6.5.3</Version>
     <Framework>6.5.x</Framework>
     <PackageRequired Version="6.5.1">ITSMCore</PackageRequired>
     <Vendor>Znuny</Vendor>
@@ -11,6 +11,12 @@
     <Description Lang="de">Das Znuny::ITSM Configuration Management Paket.</Description>
     <Description Lang="es">El paquete Znuny::ITSM Configuration Management.</Description>
     <Description Lang="hu">Az Znuny::ITSM konfigurációmenedzsment csomag.</Description>
+    <ChangeLog Version="6.5.3" Date="2024-05-16 13:33:22 +0200">- Fixed configuration item attachment handling.&#13;
+- Added filter for related configuration items for the ticket detail view and ticket create screens.&#13;
+- Added variable check to prevent not needed log file entries.&#13;
+- Fixed unlinking of configuration items in the ticket detail view.&#13;
+- Linking and unlinkg an cofniguration item now adds an entry in the ticket history.&#13;
+- Updated translations.</ChangeLog>
     <ChangeLog Version="6.5.2" Date="2023-07-12 12:35:53 +0200">Updated translations.</ChangeLog>
     <ChangeLog Version="6.5.1" Date="2023-02-20 15:46:19 +0100">Initial release for Znuny 6.5.</ChangeLog>
     <ChangeLog Version="6.4.3" Date="2022-11-09 09:29:57 +0100">Updated translations.</ChangeLog>
