@@ -36,7 +36,7 @@ our @ObjectDependencies = (
 #        if ( $FormID !~ m{^ \d+ \. \d+ \. \d+ $}xms ) {
 
         # Validate FormID of CIAttachments that contains an additional attachment key.
-        if ( $FormID !~ m{^ \d+ \. \d+ \. \d+ (\. CIAttachment \. \w+)? $}xms ) {
+        if ( $FormID !~ m{^ \d+ \. \d+ \. \d+ (\. CIAttachment \. \S+)? $}xms ) {
 # ---
             $Kernel::OM->Get('Kernel::System::Log')->Log(
                 Priority => 'error',
