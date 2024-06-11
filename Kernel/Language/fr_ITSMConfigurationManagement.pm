@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = 'Éléments de configuration attribués';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = 'Éléments de configuration attribués à un client';
     $Self->{Translation}->{'CIs assigned to customer user'} = 'Éléments de configuration attribués à un utilisateur client';
     $Self->{Translation}->{'CMDB Settings'} = 'Paramètres de la CMDB (base de données des éléments de configuration)';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         '';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Supprimer un élément de configuration';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'Couleur de l\'état de déploiement';
     $Self->{Translation}->{'Duplicate'} = 'Dupliquer';
@@ -370,6 +369,10 @@ sub Data {
         '';
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
         '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'Vue d\'ensemble de l\'élément de configuration';
     $Self->{Translation}->{'Limit for config item search.'} = '';

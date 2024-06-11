@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = 'CIs assegnati';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = 'CIs assegnati alla società cliente';
     $Self->{Translation}->{'CIs assigned to customer user'} = 'CIs assegnati all\'utenza cliente';
     $Self->{Translation}->{'CMDB Settings'} = 'Impostazioni CMDB';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'Definisce quale tipo di ticket può influire sullo stato di un elemento della configurazione collegato CI.';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Elimina elemento di configurazione';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'Colore dello stato di distribuzione';
     $Self->{Translation}->{'Duplicate'} = 'Duplicato';
@@ -371,6 +370,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'Modulo evento per impostare lo stato di configurazione su ticket-configitem-link.';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'Panoramica degli elementi di configurazione ITSM.';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =

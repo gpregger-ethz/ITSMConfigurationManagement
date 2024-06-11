@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = '';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = 'CIs asignados';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = 'Cis asignados a la Empresa del Cliente';
     $Self->{Translation}->{'CIs assigned to customer user'} = 'Cis asignados al usuario del cliente';
     $Self->{Translation}->{'CMDB Settings'} = 'Configuraciones CMDB';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'Define qué tipo de ticket puede afectar el estado de un CI vinculado.';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Eliminar elemento de configuración';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'Color del estado de despliegue';
     $Self->{Translation}->{'Duplicate'} = 'Duplicado';
@@ -371,6 +370,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'Módulo de eventos para configurar configitem-status en ticket-configitem-link.';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'Descripción general del elemento de configuración de ITSM.';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =

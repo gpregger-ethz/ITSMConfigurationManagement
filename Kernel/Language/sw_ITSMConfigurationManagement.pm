@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Sawa';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '';
     $Self->{Translation}->{'CIs assigned to customer user'} = '';
     $Self->{Translation}->{'CMDB Settings'} = '';
@@ -355,7 +355,6 @@ ITSMConfigItem::Frontend::AgentITSMConfigItem###ShowColumns';
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         '';
     $Self->{Translation}->{'Delete Configuration Item'} = '';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = '';
     $Self->{Translation}->{'Duplicate'} = 'Nakala pacha';
@@ -372,6 +371,10 @@ ITSMConfigItem::Frontend::AgentITSMConfigItem###ShowColumns';
         'Wezesha/Kutowezesha kitendeakazi cha kuangalia vipengele vya usanidi kwa majina ya pekee. Kabla ya kuwezesha chaguo hili unatakiwa kuangalia mfumo wako kwa vipengele vya usanidi kama vipo tayari kwa majina nakala pacha. Unaweza kufanya hivi na maandiko bin/znuny.Console.pl Admin::ITSM::Configitem::ListDuplicates.';
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
         '';
     $Self->{Translation}->{'ITSM config item overview.'} = '';
     $Self->{Translation}->{'Limit for config item search.'} = '';

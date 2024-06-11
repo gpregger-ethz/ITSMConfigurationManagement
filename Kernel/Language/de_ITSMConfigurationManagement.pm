@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = 'Verknüpfung zu Config-Item "%s" hinzugefügt.';
     $Self->{Translation}->{'AlternativeTo'} = 'Alternativ zu';
     $Self->{Translation}->{'Assigned CIs'} = 'Zugewiesene Configuration Items';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = 'Zum Kunden zugewiesene Configurations Items';
     $Self->{Translation}->{'CIs assigned to customer user'} = 'Zum Kundenbenutzer zugewiesene Configurations Items';
     $Self->{Translation}->{'CMDB Settings'} = 'CMDB-Einstellungen';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'Definiert, welcher Typ von Ticket den Status eines verknüpften Configuration Items beeinflussen kann.';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Configuration Item löschen.';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = 'Verknüpfung zu Config-Item "%s" entfernt.';
     $Self->{Translation}->{'DependsOn'} = 'Hängt ab von';
     $Self->{Translation}->{'Deployment State Color'} = 'Verwendungsstatus-Farbe';
     $Self->{Translation}->{'Duplicate'} = 'Duplizieren';
@@ -371,6 +370,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = 'Ein Ereignismodul das ein Configuration Item verlinkt.';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'Ein Ereignismodul das beim Verknüpfen von Tickets mit Configuration Items den Status des Configuration Items verändert.';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'ITSM Configuration Item-Übersicht';
     $Self->{Translation}->{'Limit for config item search.'} = 'Limit für die Config-Item-Suche.';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =

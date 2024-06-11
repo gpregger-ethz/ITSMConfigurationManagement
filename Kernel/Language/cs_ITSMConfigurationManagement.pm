@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '';
     $Self->{Translation}->{'CIs assigned to customer user'} = '';
     $Self->{Translation}->{'CMDB Settings'} = '';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         '';
     $Self->{Translation}->{'Delete Configuration Item'} = '';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = '';
     $Self->{Translation}->{'Duplicate'} = 'Duplikace';
@@ -370,6 +369,10 @@ sub Data {
         '';
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
         '';
     $Self->{Translation}->{'ITSM config item overview.'} = '';
     $Self->{Translation}->{'Limit for config item search.'} = '';

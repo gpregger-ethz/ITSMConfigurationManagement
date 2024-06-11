@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '';
     $Self->{Translation}->{'CIs assigned to customer user'} = '';
     $Self->{Translation}->{'CMDB Settings'} = 'CMDBの設定';
@@ -359,7 +359,6 @@ CIクラスのエントリがない場合は、ITSMConfigItem :: Frontend :: Age
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'リンクされたCIのステータスに影響するチケットのタイプを定義します。';
     $Self->{Translation}->{'Delete Configuration Item'} = '構成アイテムを削除';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'デプロイ・ステータスのカラー';
     $Self->{Translation}->{'Duplicate'} = 'コピー';
@@ -377,6 +376,10 @@ CIクラスのエントリがない場合は、ITSMConfigItem :: Frontend :: Age
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'チケット構成アイテムのリンクに構成アイテムのステータスを設定するイベントモジュール';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = '構成アイテムの一覧';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =

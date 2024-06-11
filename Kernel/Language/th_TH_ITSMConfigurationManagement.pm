@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'โอเค';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '';
     $Self->{Translation}->{'CIs assigned to customer user'} = '';
     $Self->{Translation}->{'CMDB Settings'} = '';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         '';
     $Self->{Translation}->{'Delete Configuration Item'} = '';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = '';
     $Self->{Translation}->{'Duplicate'} = 'ซ้ำ';
@@ -370,6 +369,10 @@ sub Data {
         'เปิด / ปิดการใช้งานฟังก์ชั่นเพื่อตรวจสอบ ConfigItems สำหรับชื่อที่ไม่ซ้ำกัน ก่อนเปิดใช้งานตัวเลือกนี้คุณควรตรวจสอบระบบของคุณสำหรับรายการการตั้งค่าที่มีอยู่แล้วด้วยชื่อที่ซ้ำกัน คุณสามารถทำเช่นนี้ด้วยสคริปต์ดังต่อไปนี้ bin / otrs.Console.pl Admin::ITSM::Configitem::ListDuplicates.';
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
         '';
     $Self->{Translation}->{'ITSM config item overview.'} = '';
     $Self->{Translation}->{'Limit for config item search.'} = '';

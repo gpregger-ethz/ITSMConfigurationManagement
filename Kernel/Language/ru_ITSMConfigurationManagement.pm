@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '';
     $Self->{Translation}->{'CIs assigned to customer user'} = '';
     $Self->{Translation}->{'CMDB Settings'} = '';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'Определяет, какой тип заявки может повлиять на статус связанной КЕ.';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Удалить конфигурационную единицу';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'Цвет состояния использования';
     $Self->{Translation}->{'Duplicate'} = 'Резерв';
@@ -371,6 +370,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'Модуль установки статуса КЕ для связанной с ней заявки.';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'Обзор конфигурационных единиц ITSM.';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =
@@ -391,7 +394,7 @@ sub Data {
     $Self->{Translation}->{'Parameters for the deployment states in the preferences view of the agent interface.'} =
         'Параметры для состояний использования КЕ в настройках обзоров в интерфейсе агента.';
     $Self->{Translation}->{'Parameters for the example permission groups of the general catalog attributes.'} =
-        'Параметры для примерных групповых прав для атрибутов Общего каталога';
+        'Параметры для примерных групповых прав для атрибутов Общего каталога.';
     $Self->{Translation}->{'Parameters for the pages (in which the configuration items are shown).'} =
         'Параметры страниц (на которых отображаются КЕ)';
     $Self->{Translation}->{'Permission Group'} = '';

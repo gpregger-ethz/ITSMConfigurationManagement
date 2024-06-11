@@ -276,9 +276,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'OK';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = 'Hozzárendelt konfigurációelemek';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = 'Ügyfél-vállalathoz hozzárendelt konfigurációelemek';
     $Self->{Translation}->{'CIs assigned to customer user'} = 'Ügyfél-felhasználóhoz hozzárendelt konfigurációelemek';
     $Self->{Translation}->{'CMDB Settings'} = 'CMDB beállítások';
@@ -353,7 +353,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'Meghatározza, hogy mely jegytípus befolyásolhatja egy kapcsolt konfigurációelem állapotát.';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Konfigurációelem törlése';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'Üzembe állítási állapot színe';
     $Self->{Translation}->{'Duplicate'} = 'Kettőzés';
@@ -371,6 +370,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'Eseménymodul a konfigurációelem állapotának beállításához egy jegy konfigurációelem hivatkozásán.';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'ITSM konfigurációelem áttekintés.';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =
