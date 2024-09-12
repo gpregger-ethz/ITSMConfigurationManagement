@@ -466,7 +466,7 @@ sub Data {
     $Self->{Translation}->{'productive'} = 'productivo';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'No',
     'Ok',
     'Please enter at least one search value or * to find anything.',

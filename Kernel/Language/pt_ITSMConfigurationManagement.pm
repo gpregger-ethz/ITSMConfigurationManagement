@@ -51,7 +51,7 @@ sub Data {
     $Self->{Translation}->{'Deployment State Type'} = 'Tipo de Estado de Implementação';
     $Self->{Translation}->{'Current Incident State'} = 'Estado do Incidente Atual';
     $Self->{Translation}->{'Current Incident State Type'} = 'Estado Atual de Incidente por tipo';
-    $Self->{Translation}->{'Last changed'} = 'Última modificação';
+    $Self->{Translation}->{'Last changed'} = 'Última alteração';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemAdd.tt
     $Self->{Translation}->{'Filter for Classes'} = 'Filtro para Classes';
@@ -218,7 +218,7 @@ sub Data {
     $Self->{Translation}->{'Review'} = 'Revisão';
     $Self->{Translation}->{'Test/QA'} = 'Teste de Qualidade';
     $Self->{Translation}->{'Laptop'} = 'portátil';
-    $Self->{Translation}->{'Desktop'} = 'Área ';
+    $Self->{Translation}->{'Desktop'} = 'Desktop';
     $Self->{Translation}->{'PDA'} = '';
     $Self->{Translation}->{'Server'} = 'Servidor';
     $Self->{Translation}->{'Other'} = 'Outro';
@@ -252,7 +252,7 @@ sub Data {
     $Self->{Translation}->{'GSM'} = '';
     $Self->{Translation}->{'Client Application'} = 'Aplicação Cliente';
     $Self->{Translation}->{'Middleware'} = '';
-    $Self->{Translation}->{'Server Application'} = 'Servidor Aplicacional ';
+    $Self->{Translation}->{'Server Application'} = 'Aplicação servidor';
     $Self->{Translation}->{'Client OS'} = 'SO Cliente';
     $Self->{Translation}->{'Server OS'} = 'SO Servidor';
     $Self->{Translation}->{'Admin Tool'} = 'Ferramenta de Administração';
@@ -394,7 +394,7 @@ sub Data {
     $Self->{Translation}->{'Parameters for the deployment states in the preferences view of the agent interface.'} =
         'Parâmetros de estado de implementação nas preferências de visualização da interface de agente.';
     $Self->{Translation}->{'Parameters for the example permission groups of the general catalog attributes.'} =
-        'Parâmetros do grupos de permissão de exemplo dos atributos do catálogo geral.';
+        'Parâmetros para os grupos de permissão de exemplo dos atributos do catálogo geral.';
     $Self->{Translation}->{'Parameters for the pages (in which the configuration items are shown).'} =
         'Parâmetros das páginas (nas quais os itens de configuração são visualizados).';
     $Self->{Translation}->{'Permission Group'} = '';
@@ -466,7 +466,7 @@ sub Data {
     $Self->{Translation}->{'productive'} = '';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'No',
     'Ok',
     'Please enter at least one search value or * to find anything.',
