@@ -2,9 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ITSMConfigurationManagement\n"
 "POT-Creation-Date: 2020-09-22 13:14+0000\n"
-"PO-Revision-Date: 2024-09-11 07:35+0000\n"
-"Last-Translator: Rui Martins <rui.martins@fccn.pt>\n"
-"Language-Team: Portuguese <https://translations.znuny.org/projects/znuny/itsmconfigurationmanagement/pt/>\n"
+"PO-Revision-Date: 2024-09-27 11:44+0000\n"
+"Last-Translator: aderito <aderito.pina@gmail.com>\n"
+"Language-Team: Portuguese <https://translations.znuny.org/projects/znuny/"
+"itsmconfigurationmanagement/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr "Mudar definição de classe"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminITSMConfigItem.tt
 msgid "Config Item Class"
-msgstr ""
+msgstr "Config classe do Item"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminITSMConfigItem.tt
 msgid "Definition"
@@ -74,7 +75,7 @@ msgstr "Selecione uma classe a partir da lista para criar um novo item de config
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemBulk.tt
 msgid "ITSM ConfigItem Bulk Action"
-msgstr ""
+msgstr "Ação em massa ITSM ConfigItem"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemBulk.tt
 msgid "Deployment state"
@@ -86,19 +87,19 @@ msgstr "Estado de incidente"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemBulk.tt
 msgid "Link to another"
-msgstr ""
+msgstr "Ligar a outro"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemBulk.tt
 msgid "Invalid Configuration Item number!"
-msgstr ""
+msgstr "Número de item de configuração inválido!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemBulk.tt
 msgid "The number of another Configuration Item to link with."
-msgstr ""
+msgstr "O número de outro Item de Configuração a ligar."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemDelete.tt
 msgid "Do you really want to delete this config item?"
-msgstr ""
+msgstr "Pretende mesmo eliminar este item de configuração?"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemEdit.tt
 msgid "The name of this config item"
@@ -107,10 +108,12 @@ msgstr "O nome deste item de configuração"
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemEdit.tt
 msgid "Name is already in use by the ConfigItems with the following Number(s): %s"
 msgstr ""
+"O nome já está a ser utilizado pelo ConfigItems com o(s) seguinte(s) "
+"número(s): %s"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemHistory.tt
 msgid "History of Config Item: %s"
-msgstr ""
+msgstr "Histórico do item de configuração: %s"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemHistory.tt
 msgid "History Content"
@@ -134,7 +137,7 @@ msgstr "Itens de configuração por página"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemOverviewSmall.tt
 msgid "A generic ITSM Configuration Item table"
-msgstr ""
+msgstr "Uma tabela genérica de itens de configuração ITSM"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemSearch.tt
 msgid "Run Search"
@@ -174,7 +177,7 @@ msgstr "Estado da Versão de Incidentes"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemZoom.tt
 msgid "Version Deployment State"
-msgstr ""
+msgstr "Estado de implementação da versão"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemZoom.tt
 msgid "Version Number"
@@ -190,7 +193,7 @@ msgstr "Propriedade"
 
 #. Perl Module: Kernel/Modules/AgentITSMConfigItem.pm
 msgid "No access to Class is given!"
-msgstr ""
+msgstr "Não é dado acesso à classe!"
 
 #. Perl Module: Kernel/Modules/AgentITSMConfigItem.pm
 msgid "Overview: ITSM ConfigItem"
@@ -1287,4 +1290,3 @@ msgstr ""
 #. SysConfig
 msgid "Filters the customer config items by depoyment states into the customer config item widget."
 msgstr ""
-
