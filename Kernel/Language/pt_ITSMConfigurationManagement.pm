@@ -40,7 +40,7 @@ sub Data {
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminITSMConfigItem.tt
     $Self->{Translation}->{'Change class definition'} = 'Mudar definição de classe';
     $Self->{Translation}->{'Config Item Management'} = 'Gestão de Itens de Configuração';
-    $Self->{Translation}->{'Config Item Class'} = '';
+    $Self->{Translation}->{'Config Item Class'} = 'Config classe do Item';
     $Self->{Translation}->{'Definition'} = 'Definição';
     $Self->{Translation}->{'Change'} = 'Alterar';
 
@@ -59,26 +59,26 @@ sub Data {
     $Self->{Translation}->{'Config Item'} = 'Item de Configuração';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemBulk.tt
-    $Self->{Translation}->{'ITSM ConfigItem Bulk Action'} = '';
+    $Self->{Translation}->{'ITSM ConfigItem Bulk Action'} = 'Ação em massa ITSM ConfigItem';
     $Self->{Translation}->{'Deployment state'} = 'Estado de Implementação';
     $Self->{Translation}->{'Incident state'} = 'Estado de incidente';
-    $Self->{Translation}->{'Link to another'} = '';
-    $Self->{Translation}->{'Invalid Configuration Item number!'} = '';
-    $Self->{Translation}->{'The number of another Configuration Item to link with.'} = '';
+    $Self->{Translation}->{'Link to another'} = 'Ligar a outro';
+    $Self->{Translation}->{'Invalid Configuration Item number!'} = 'Número de item de configuração inválido!';
+    $Self->{Translation}->{'The number of another Configuration Item to link with.'} = 'O número de outro Item de Configuração a ligar.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemCustomerCIsWidget.tt
     $Self->{Translation}->{'Customer related config items'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemDelete.tt
-    $Self->{Translation}->{'Do you really want to delete this config item?'} = '';
+    $Self->{Translation}->{'Do you really want to delete this config item?'} = 'Pretende mesmo eliminar este item de configuração?';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemEdit.tt
     $Self->{Translation}->{'The name of this config item'} = 'O nome deste item de configuração';
     $Self->{Translation}->{'Name is already in use by the ConfigItems with the following Number(s): %s'} =
-        '';
+        'O nome já está a ser utilizado pelo ConfigItems com o(s) seguinte(s) número(s): %s';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemHistory.tt
-    $Self->{Translation}->{'History of Config Item: %s'} = '';
+    $Self->{Translation}->{'History of Config Item: %s'} = 'Histórico do item de configuração: %s';
     $Self->{Translation}->{'History Content'} = 'Histórico do conteúdo';
     $Self->{Translation}->{'Createtime'} = 'Hora de criação';
     $Self->{Translation}->{'Zoom view'} = 'Vista de detalhe';
@@ -88,7 +88,7 @@ sub Data {
     $Self->{Translation}->{'Config Items per page'} = 'Itens de configuração por página';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemOverviewSmall.tt
-    $Self->{Translation}->{'A generic ITSM Configuration Item table'} = '';
+    $Self->{Translation}->{'A generic ITSM Configuration Item table'} = 'Uma tabela genérica de itens de configuração ITSM';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentITSMConfigItemSearch.tt
     $Self->{Translation}->{'Also search in previous versions?'} = 'Procurar nas versões anteriores também?';
@@ -101,13 +101,13 @@ sub Data {
     $Self->{Translation}->{'Show one version'} = 'Visualizar uma versão';
     $Self->{Translation}->{'Show all versions'} = 'Visualizar todas as versões';
     $Self->{Translation}->{'Version Incident State'} = 'Estado da Versão de Incidentes';
-    $Self->{Translation}->{'Version Deployment State'} = '';
+    $Self->{Translation}->{'Version Deployment State'} = 'Estado de implementação da versão';
     $Self->{Translation}->{'Version Number'} = 'Número da versão';
     $Self->{Translation}->{'Configuration Item Version Details'} = 'Detalhes da Versão do Item de Configuração';
     $Self->{Translation}->{'Property'} = 'Propriedade';
 
     # Perl Module: Kernel/Modules/AgentITSMConfigItem.pm
-    $Self->{Translation}->{'No access to Class is given!'} = '';
+    $Self->{Translation}->{'No access to Class is given!'} = 'Não é dado acesso à classe!';
 
     # Perl Module: Kernel/Modules/AgentITSMConfigItemBulk.pm
     $Self->{Translation}->{'No ConfigItemID is given!'} = '';
