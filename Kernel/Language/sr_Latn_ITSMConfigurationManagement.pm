@@ -278,9 +278,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'U redu';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = 'Dodeljene konfiguracione stavke';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = 'Konfiguracione stavke dodeljene firmi klijenta';
     $Self->{Translation}->{'CIs assigned to customer user'} = 'Konfiguracione stavke dodeljene klijentu korisniku';
     $Self->{Translation}->{'CMDB Settings'} = 'CMDB podešavanja';
@@ -355,7 +355,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         'Određuje koji tip tiketa može da utiče na status povezane CI.';
     $Self->{Translation}->{'Delete Configuration Item'} = 'Brisanje konfiguracione stavke';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = 'Boja statusa raspoređivanja';
     $Self->{Translation}->{'Duplicate'} = 'Duplikat';
@@ -373,6 +372,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         'Modul događaja za podešavanje statusa konfiguracionih stavki prilikom postavljanja veza.';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'Pregled ITSM konfiguracione stavke.';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =
@@ -465,7 +468,7 @@ sub Data {
     $Self->{Translation}->{'productive'} = 'produkcija';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'No',
     'Ok',
     'Please enter at least one search value or * to find anything.',

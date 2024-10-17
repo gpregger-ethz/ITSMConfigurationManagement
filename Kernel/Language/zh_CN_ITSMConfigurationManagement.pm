@@ -278,9 +278,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = '确定';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '已分配的配置项';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '已分配给客户单位的配置项';
     $Self->{Translation}->{'CIs assigned to customer user'} = '已分配给客户用户的配置项';
     $Self->{Translation}->{'CMDB Settings'} = 'CMDB设置';
@@ -355,7 +355,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         '定义哪一类工单可以影响一个链接的配置项的状态。';
     $Self->{Translation}->{'Delete Configuration Item'} = '删除配置项';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = '部署状态的颜色';
     $Self->{Translation}->{'Duplicate'} = '复制';
@@ -373,6 +372,10 @@ sub Data {
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
         '在工单-配置项的链接中设置配置项-状态的事件模块。';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
+        '';
     $Self->{Translation}->{'ITSM config item overview.'} = 'ITSM配置项概览。';
     $Self->{Translation}->{'Limit for config item search.'} = '';
     $Self->{Translation}->{'List of events that are available for generic interface event object type ITSMConfigItem.'} =
@@ -465,7 +468,7 @@ sub Data {
     $Self->{Translation}->{'productive'} = '投产';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'No',
     'Ok',
     'Please enter at least one search value or * to find anything.',

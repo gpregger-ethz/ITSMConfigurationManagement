@@ -278,9 +278,9 @@ sub Data {
     $Self->{Translation}->{'Ok'} = 'Ok';
 
     # SysConfig
-    $Self->{Translation}->{'Add link to config item "%s".'} = '';
     $Self->{Translation}->{'AlternativeTo'} = '';
     $Self->{Translation}->{'Assigned CIs'} = '';
+    $Self->{Translation}->{'Autoloading of upload cache.'} = '';
     $Self->{Translation}->{'CIs assigned to customer company'} = '';
     $Self->{Translation}->{'CIs assigned to customer user'} = '';
     $Self->{Translation}->{'CMDB Settings'} = '';
@@ -355,7 +355,6 @@ sub Data {
     $Self->{Translation}->{'Defines which type of ticket can affect the status of a linked CI.'} =
         '';
     $Self->{Translation}->{'Delete Configuration Item'} = '';
-    $Self->{Translation}->{'Delete link to config item "%s".'} = '';
     $Self->{Translation}->{'DependsOn'} = '';
     $Self->{Translation}->{'Deployment State Color'} = '';
     $Self->{Translation}->{'Duplicate'} = 'Duplicar';
@@ -372,6 +371,10 @@ sub Data {
         '';
     $Self->{Translation}->{'Event Module that links a ConfigItem.'} = '';
     $Self->{Translation}->{'Event module to set configitem-status on ticket-configitem-link.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer company config items by depoyment states into the customer config item widget.'} =
+        '';
+    $Self->{Translation}->{'Filters the customer config items by depoyment states into the customer config item widget.'} =
         '';
     $Self->{Translation}->{'ITSM config item overview.'} = '';
     $Self->{Translation}->{'Limit for config item search.'} = '';
@@ -393,10 +396,10 @@ sub Data {
     $Self->{Translation}->{'Parameters for the deployment states in the preferences view of the agent interface.'} =
         'Parâmetros de estado de implementação nas preferências de visualização da interface de agente.';
     $Self->{Translation}->{'Parameters for the example permission groups of the general catalog attributes.'} =
-        'Parâmetros do grupos de permissão de exemplo dos atributos do catálogo geral.';
+        'Parâmetros para os grupos de permissões de exemplo dos atributos do catálogo geral.';
     $Self->{Translation}->{'Parameters for the pages (in which the configuration items are shown).'} =
         'Parâmetros das páginas (nas quais os itens de configuração são visualizados).';
-    $Self->{Translation}->{'Permission Group'} = '';
+    $Self->{Translation}->{'Permission Group'} = 'Permissão de Grupo';
     $Self->{Translation}->{'Registers a ITSMConfigItem-EventModule that will save related attachments.'} =
         '';
     $Self->{Translation}->{'Registers an output filter that shows a config item widget.'} = '';
@@ -465,7 +468,7 @@ sub Data {
     $Self->{Translation}->{'productive'} = '';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'No',
     'Ok',
     'Please enter at least one search value or * to find anything.',

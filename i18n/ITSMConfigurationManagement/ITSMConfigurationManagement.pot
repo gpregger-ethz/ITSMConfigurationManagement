@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ITSMConfigurationManagement\n"
-"POT-Creation-Date: 2023-03-01 15:27+0000\n"
+"POT-Creation-Date: 2024-10-17 07:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -803,15 +803,15 @@ msgid "Ok"
 msgstr ""
 
 #. SysConfig
-msgid "Add link to config item \"%s\"."
-msgstr ""
-
-#. SysConfig
 msgid "AlternativeTo"
 msgstr ""
 
 #. SysConfig
 msgid "Assigned CIs"
+msgstr ""
+
+#. SysConfig
+msgid "Autoloading of upload cache."
 msgstr ""
 
 #. SysConfig
@@ -999,10 +999,6 @@ msgid "Delete Configuration Item"
 msgstr ""
 
 #. SysConfig
-msgid "Delete link to config item \"%s\"."
-msgstr ""
-
-#. SysConfig
 msgid "DependsOn"
 msgstr ""
 
@@ -1048,6 +1044,14 @@ msgstr ""
 
 #. SysConfig
 msgid "Event module to set configitem-status on ticket-configitem-link."
+msgstr ""
+
+#. SysConfig
+msgid "Filters the customer company config items by depoyment states into the customer config item widget."
+msgstr ""
+
+#. SysConfig
+msgid "Filters the customer config items by depoyment states into the customer config item widget."
 msgstr ""
 
 #. SysConfig

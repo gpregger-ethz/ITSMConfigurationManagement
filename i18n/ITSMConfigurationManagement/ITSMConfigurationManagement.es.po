@@ -1278,3 +1278,15 @@ msgstr ""
 msgid "Delete link to config item \"%s\"."
 msgstr ""
 
+#. SysConfig
+msgid "Autoloading of upload cache."
+msgstr ""
+
+#. SysConfig
+msgid "Filters the customer company config items by depoyment states into the customer config item widget."
+msgstr ""
+
+#. SysConfig
+msgid "Filters the customer config items by depoyment states into the customer config item widget."
+msgstr ""
+
