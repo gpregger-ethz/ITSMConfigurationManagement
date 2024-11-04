@@ -397,7 +397,7 @@ sub Data {
         'Параметры для примерных групповых прав для атрибутов Общего каталога.';
     $Self->{Translation}->{'Parameters for the pages (in which the configuration items are shown).'} =
         'Параметры страниц (на которых отображаются КЕ)';
-    $Self->{Translation}->{'Permission Group'} = '';
+    $Self->{Translation}->{'Permission Group'} = 'Группа доступа';
     $Self->{Translation}->{'Registers a ITSMConfigItem-EventModule that will save related attachments.'} =
         '';
     $Self->{Translation}->{'Registers an output filter that shows a config item widget.'} = '';
