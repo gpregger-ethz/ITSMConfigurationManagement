@@ -1560,6 +1560,13 @@ replace user values with system ready values.
 sub _ReplaceValue {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject        = $Kernel::OM->Get('Kernel::System::Log');
+
+    $LogObject->Log(
+	    Priority => 'error',
+	    Message  => '_ReplaceValue in Kernel/GenericInterface/Operation/ConfigItem/Common.pm called'
+    );
+
     # set the list of input types that needs to be replaced
     my %ReplaceInputTypes = (
         Date           => 1,
@@ -1631,7 +1638,17 @@ sub _InvertReplaceValue {
     }
     else {
         # run General Catalog replace
-        $NewValue = $Self->InvertReplaceInputGeneralCatalog(%Param);
+	my @Values = split(";", $Param{Value});
+        my @NewValues;
+
+	foreach (@Values) {
+	    $Param{Value} = $_;
+            push(@NewValues, $Self->InvertReplaceInputGeneralCatalog(%Param));
+        }
+        $Param{Value} = join(";", @Values);
+
+        use JSON;
+        $NewValue = encode_json(\@NewValues);
     }
 
     return $NewValue;

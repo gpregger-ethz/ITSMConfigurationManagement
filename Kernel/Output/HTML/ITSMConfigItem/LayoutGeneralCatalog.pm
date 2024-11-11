@@ -108,7 +108,15 @@ sub FormDataGet {
     my %FormData;
 
     # get form data
-    $FormData{Value} = $Kernel::OM->Get('Kernel::System::Web::Request')->GetParam( Param => $Param{Key} );
+    if ( $Param{Item}->{Input}->{Multiselect} ) {
+        my @ValueArray = $Kernel::OM->Get('Kernel::System::Web::Request')->GetArray( Param => $Param{Key} );
+	use Data::Dump qw(dump);
+        $FormData{Value} = join(";", @ValueArray);
+    }
+
+    else {
+        $FormData{Value} = $Kernel::OM->Get('Kernel::System::Web::Request')->GetParam( Param => $Param{Key} );
+    }
 
     # set invalid param
     if ( $Param{Item}->{Input}->{Required} && !$FormData{Value} ) {
@@ -172,16 +180,23 @@ sub InputCreate {
     # reverse the class list
     my %ReverseClassList = reverse %{$ClassList};
 
-    my $SelectedID;
+    my @SelectedID;
 
     # get the current value
     if ( defined $Param{Value} ) {
-        $SelectedID = $Param{Value};
+        @SelectedID = split(";", $Param{Value});
     }
+
 
     # get the default id by default value
     else {
-        $SelectedID = $ReverseClassList{ $Param{Item}->{Input}->{ValueDefault} || '' } || '';
+	push(@SelectedID, $ReverseClassList{ $Param{Item}->{Input}->{ValueDefault} || '' } || '');
+    }
+
+    # get multiple switch
+    my $MultiSelect = 0;
+    if ( defined $Param{Item}->{Input}->{Multiselect} ) {
+       $MultiSelect = 1;
     }
 
     # generate string
@@ -190,8 +205,9 @@ sub InputCreate {
         Name         => $Param{Key},
         ID           => $ItemId,
         PossibleNone => 1,
+	Multiple     => $MultiSelect,
         Translation  => $Translation,
-        SelectedID   => $SelectedID,
+        SelectedID   => \@SelectedID,
         Class        => $CSSClass,
     );
 

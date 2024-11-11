@@ -78,9 +78,18 @@ sub ValueLookup {
     return if !$ItemList;
     return if ref $ItemList ne 'HASH';
 
-    my $Value = $ItemList->{ $Param{Value} };
+    my @XmlValueArray = split(";", $Param{Value});
 
-    return $Value;
+    if (scalar(@XmlValueArray) < 2) {
+        my $Value = $ItemList->{ @XmlValueArray[0] };
+	return $Value;
+    }
+    
+    my @ValueArray;
+    foreach(@XmlValueArray) {
+	push(@ValueArray, $ItemList->{ $_ });
+    }
+    return join("<br>", @ValueArray);
 }
 
 =head2 StatsAttributeCreate()

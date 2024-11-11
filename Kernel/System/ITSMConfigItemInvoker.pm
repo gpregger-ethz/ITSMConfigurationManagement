@@ -278,13 +278,25 @@ sub _GetReadableValue {
     my $ReadableValue = $Value;
 
     if ( $Param{FieldType} eq 'GeneralCatalog' ) {
-        my $GeneralCatalogItemData = $GeneralCatalogObject->ItemGet(
-            ItemID => $Value,
-        );
-        return $Value if !IsHashRefWithData($GeneralCatalogItemData);
-        return $Value if !defined $GeneralCatalogItemData->{Name};
+	my $LogObject        = $Kernel::OM->Get('Kernel::System::Log');
 
-        $ReadableValue = $GeneralCatalogItemData->{Name};
+	my @Values = split(";", $Value);
+        my @ReadableValues;
+
+	foreach (@Values) {
+            my $GeneralCatalogItemData = $GeneralCatalogObject->ItemGet(
+                ItemID => $_,
+            );
+            push(@ReadableValues, $Value) if !IsHashRefWithData($GeneralCatalogItemData);
+            push(@ReadableValues, $Value) if !defined $GeneralCatalogItemData->{Name};
+
+            push(@ReadableValues, $GeneralCatalogItemData->{Name});
+        }
+	$LogObject->Log(
+            Priority => 'error',
+            Message  => "_GetReadableValue in Kernel/System/ITSMConfigItemInvoker.pm called",
+        );
+	$ReadableValue = join(";", @ReadableValues);
     }
     elsif ( $Param{FieldType} eq 'CustomerCompany' ) {
         my %CustomerCompany = $CustomerCompanyObject->CustomerCompanyGet(
